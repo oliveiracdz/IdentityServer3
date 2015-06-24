@@ -61,6 +61,10 @@ namespace IdentityServer3.Host
                     factory.ConfigureScopeStoreCache();
                     factory.ConfigureUserServiceCache();
 
+                    factory.ConfigureDefaultViewService(new DefaultViewServiceOptions {
+                        CacheViews = false
+                    });
+
                     var idsrvOptions = new IdentityServerOptions
                     {
                         Factory = factory,

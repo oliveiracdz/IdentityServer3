@@ -94,6 +94,7 @@ namespace IdentityServer3.Core.Services.Default
         /// </returns>
         public virtual Task<Stream> Login(LoginViewModel model, SignInMessage message)
         {
+            model.Custom = new { LegalText = "Whatever" };
             return Render(model, LoginView);
         }
 
