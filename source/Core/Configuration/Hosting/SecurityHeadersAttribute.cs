@@ -26,7 +26,7 @@ namespace Thinktecture.IdentityServer.Core.Configuration.Hosting
     {
         public SecurityHeadersAttribute()
         {
-            EnableXfo = true;
+            EnableXfo = false; // Iframes
             EnableCto = true;
             EnableCsp = true;
         }
